@@ -1,0 +1,12 @@
+version: "3"
+services:
+    static:
+      image: sainigma/simagenerator
+      ports:
+        - 80:80
+      container_name: simagenerator
+    watchtower:
+      image: containrrr/watchtower
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      container_name: watchtower
